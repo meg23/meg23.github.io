@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pipe Free America - Advocacy for Sustainable Alternatives</title>
     <!-- Bootstrap CSS -->
@@ -14,7 +14,9 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Pipe Free America</a>
+            <a class="navbar-brand" href="#">
+                <img src="no-pipe-icon.png" alt="No Pipes" class="no-pipe-icon">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,6 +30,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#research">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">News</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -71,16 +76,45 @@
     <div class="container mt-5 text-center" id="advocacy">
         <div class="row">
             <div class="col-md-4">
-                <h4>Community Outreach</h4>
+                <h4>Community</h4>
                 <p>Organize local events and workshops to educate your community about the environmental and economic benefits of alternative plumbing solutions.</p>
             </div>
             <div class="col-md-4">
-                <h4>Lobbying for Policy Change</h4>
+                <h4>Lobbying</h4>
                 <p>Work with local and national policymakers to promote laws and regulations that allow for greater flexibility in housing infrastructure and reduce reliance on traditional plumbing.</p>
             </div>
             <div class="col-md-4">
-                <h4>Join Our Campaigns</h4>
+                <h4>Join Us</h4>
                 <p>Get involved in our national campaigns that aim to raise awareness and gather support for alternative plumbing solutions that are sustainable and cost-effective.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="themed-separator"></div>
+
+    <!-- News Section -->
+    <div class="container mt-5" id="news">
+        <h2>Latest News</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img src="news-image1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Victory for Pipe Free America in Local Council Vote</h5>
+                        <p class="card-text">In a groundbreaking decision, a local council has voted to eliminate mandatory plumbing codes, paving the way for innovative, sustainable housing solutions.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img src="news-image2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">New Study Links Chimneys to Environmental Decline</h5>
+                        <p class="card-text">Researchers have found that traditional chimneys contribute significantly to environmental degradation, sparking a debate on their continued use.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -118,9 +152,17 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer mt-5 py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">&copy; 2024 Pipe Free America. All rights reserved.</span>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
