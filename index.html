@@ -5,17 +5,22 @@
     <meta http-equiv="X-UA-Compatible" IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pipe Free America - Advocacy for Sustainable Alternatives</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="./styles.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <link rel="icon" 
+          type="image/png" 
+          href="./assets/images/no-pipe-icon.png" 
+          sizes="32x32" />
+    <link rel="shortcut icon" 
+          href="./assets/images/no-pipe-icon.png" 
+          type="image/png" />
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="no-pipe-icon.png" alt="No Pipes" class="no-pipe-icon">
+                <img src="./assets/images/no-pipe-icon.png" alt="No Pipes" class="no-pipe-icon">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -173,7 +178,12 @@
         <div id="research" class="my-5">
             <h2>Research and Insights</h2>
             <p>Our research delves into the environmental, economic, and social implications of modern plumbing systems. We provide data-driven insights that question the sustainability of traditional plumbing and explore the benefits of alternative living systems.</p>
-            <button class="btn btn-primary">Explore Our Research</button>
+           <button
+             class="btn btn-primary"
+             onclick="window.open('./assets/downloads/plumbing-whitepaper.pdf', '_blank');"
+           >
+             Download Whitepaper
+           </button>
         </div>
 
         <div id="contact" class="my-5">
