@@ -32,7 +32,7 @@ body {
   height: auto;
 }
 
-/* Nav links (regular items in black) */
+/* Nav links */
 .navbar-nav {
   display: flex;
   align-items: center;
@@ -54,18 +54,18 @@ body {
   color: #ffcc00 !important;
 }
 
-/* Buttons (“Act Now” outline and “Donate” solid) */
+/* Buttons (“Act Now” + “Donate”) */
 .navbar .btn-primary,
 .navbar .btn-outline-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   padding: 0.5rem 1.25rem;
   border-radius: 0.375rem;
   min-height: 2.5rem;
-  font-family: 'Poppins', sans-serif;
 }
 
 .navbar .btn-outline-primary {
@@ -82,58 +82,72 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Hero section */
+/* Hero section wrapper */
 .hero-section {
   position: relative;
   width: 100%;
   min-height: 500px;
-  background-image: url("hero_image.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   display: flex;
-  align-items: center;      /* vertical center */
-  justify-content: center;  /* horizontal center */
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   padding: 0;
+  overflow: hidden;
 }
 
-/* Dark overlay */
-.hero-section::before {
+/* Background image with adjustable opacity */
+.hero-section::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: url("hero_image.png") center/cover no-repeat;
+  opacity: 0.6;  /* adjust 0.0–1.0 to change image transparency */
   z-index: 0;
   pointer-events: none;
 }
 
-/* Text container */
-.hero-content {
+/* White box behind text, centered content, now semi-transparent */
+.hero-section .container {
   position: relative;
   z-index: 1;
   max-width: 800px;
   margin: 0 20px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);  /* semi-transparent white */
+  padding: 40px 20px;                           /* ample top/bottom padding */
   border-radius: 8px;
+
+  /* flex centering inside the white box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* horizontal */
+  justify-content: center;    /* vertical */
+  text-align: center;
 }
 
-/* Hero headline & subtitle */
+/* Hero headline & subtitle in solid black, no shadows */
+.hero-section .display-4,
 .hero-title {
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   margin-bottom: 0.5em;
-  color: #007bff !important;   /* match Donate button */
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  color: #000000 !important;
+  text-shadow: none !important;
 }
 
+.hero-section .lead,
 .hero-description {
   font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
   margin-bottom: 1.5em;
-  color: #ffffff !important;   /* pure white */
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* Center the subtitle text within the white box */
+.hero-section .lead,
+.hero-section .hero-description {
+  text-align: center !important;
+  margin: 0 auto;
+  max-width: 700px;
 }
 
 /* Responsive breakpoints */
@@ -145,33 +159,27 @@ body {
   .news-ticker {
     font-size: 0.9rem;
   }
+  .hero-section {
+    min-height: 300px;
+  }
+  .hero-section .display-4,
   .hero-title {
     font-size: 2.2rem;
   }
+  .hero-section .lead,
   .hero-description {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-section {
-    min-height: 300px;
-  }
+  .hero-section .display-4,
   .hero-title {
     font-size: 1.8rem;
   }
+  .hero-section .lead,
   .hero-description {
     font-size: 0.9rem;
   }
-}
-
-.hero-section .display-4 {
-  color: #007bff !important;  /* match “Donate” button blue */
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-}
-
-.hero-section .lead {
-  color: #ffffff !important;  /* pure white */
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
 
