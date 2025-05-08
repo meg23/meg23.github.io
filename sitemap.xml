@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://pipefreeamerica.org/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2025-05-07</lastmod>
+  </url>
+  <!-- About section -->
+  <url>
+    <loc>https://pipefreeamerica.org/#about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-05-07</lastmod>
+  </url>
+  <!-- Advocacy section -->
+  <url>
+    <loc>https://pipefreeamerica.org/#advocacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-05-07</lastmod>
+  </url>
+  <!-- Research section -->
+  <url>
+    <loc>https://pipefreeamerica.org/#research</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-05-07</lastmod>
+  </url>
+  <!-- News section -->
+  <url>
+    <loc>https://pipefreeamerica.org/#news</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2025-05-01</lastmod>
+  </url>
+  <!-- Act Now section -->
+  <url>
+    <loc>https://pipefreeamerica.org/#act-now</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-05-07</lastmod>
+  </url>
+</urlset>
