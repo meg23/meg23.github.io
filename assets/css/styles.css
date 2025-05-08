@@ -26,7 +26,6 @@ body {
   justify-content: space-between;
   font-family: 'Poppins', sans-serif;
 }
-
 .navbar-brand img.no-pipe-icon {
   width: 40px;
   height: auto;
@@ -37,11 +36,9 @@ body {
   display: flex;
   align-items: center;
 }
-
 .navbar-nav .nav-item {
   margin: 0 0.75rem;
 }
-
 .navbar-nav .nav-link {
   color: #000 !important;
   font-weight: 500;
@@ -49,7 +46,6 @@ body {
   text-transform: uppercase;
   padding: 0.5rem 0;
 }
-
 .navbar-nav .nav-link:hover {
   color: #ffcc00 !important;
 }
@@ -67,7 +63,6 @@ body {
   border-radius: 0.375rem;
   min-height: 2.5rem;
 }
-
 .navbar .btn-outline-primary {
   border-width: 2px;
 }
@@ -105,27 +100,32 @@ body {
   pointer-events: none;
 }
 
-/* White box behind text, centered content, now semi-transparent */
+/* White band behind text, full-width with side padding */
 .hero-section .container {
   position: relative;
   z-index: 1;
-  max-width: 800px;
-  margin: 0 20px;
-  background-color: rgba(255, 255, 255, 0.8);  /* semi-transparent white */
-  padding: 40px 20px;                           /* ample top/bottom padding */
-  border-radius: 8px;
-
-  /* flex centering inside the white box */
+  width: 100%;
+  max-width: none;             /* override Bootstrap container */
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.5);  /* more see-through white */
+  padding: 60px 20px;          
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;        /* horizontal */
-  justify-content: center;    /* vertical */
+  justify-content: center;
+}
+
+.hero-text-wrapper {
+  position: relative;
+  background: rgba(255, 255, 255, 0.7); /* light, semi-transparent grey */
+  padding: 20px 30px;
+  display: inline-block;
+  border-radius: 4px;
   text-align: center;
 }
 
-/* Hero headline & subtitle in solid black, no shadows */
-.hero-section .display-4,
-.hero-title {
+/* Text inside the grey box */
+.hero-text-wrapper .display-4,
+.hero-text-wrapper .hero-title {
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   margin-bottom: 0.5em;
@@ -133,21 +133,15 @@ body {
   text-shadow: none !important;
 }
 
-.hero-section .lead,
-.hero-description {
+.hero-text-wrapper .lead,
+.hero-text-wrapper .hero-description {
   font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
   margin-bottom: 1.5em;
   color: #000000 !important;
   text-shadow: none !important;
-}
-
-/* Center the subtitle text within the white box */
-.hero-section .lead,
-.hero-section .hero-description {
-  text-align: center !important;
-  margin: 0 auto;
   max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Responsive breakpoints */
@@ -162,23 +156,23 @@ body {
   .hero-section {
     min-height: 300px;
   }
-  .hero-section .display-4,
-  .hero-title {
+  .hero-text-wrapper .display-4,
+  .hero-text-wrapper .hero-title {
     font-size: 2.2rem;
   }
-  .hero-section .lead,
-  .hero-description {
+  .hero-text-wrapper .lead,
+  .hero-text-wrapper .hero-description {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-section .display-4,
-  .hero-title {
+  .hero-text-wrapper .display-4,
+  .hero-text-wrapper .hero-title {
     font-size: 1.8rem;
   }
-  .hero-section .lead,
-  .hero-description {
+  .hero-text-wrapper .lead,
+  .hero-text-wrapper .hero-description {
     font-size: 0.9rem;
   }
 }
