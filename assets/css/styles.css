@@ -177,3 +177,23 @@ body {
   }
 }
 
+/* Make all news cards equal height */
+#news .row {
+  /* ensure children can stretch */
+  align-items: stretch;
+}
+
+#news .col-md-6 {
+  display: flex;          /* turn each column into a flex parent */
+  margin-bottom: 1rem;    /* preserve spacing between rows */
+}
+
+#news .col-md-6 .card {
+  display: flex;          
+  flex-direction: column; /* so header, body, footer stack vertically */
+  flex: 1;                /* fill the available height of the column */
+}
+
+#news .col-md-6 .card-body {
+  flex: 1;                /* allow the body to grow and push the button/footer down */
+}
